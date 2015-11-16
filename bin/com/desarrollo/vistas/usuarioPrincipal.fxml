@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorUsuarioPrincipal">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="542.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevoUsuario" text="Nuevo usuario" />
+                  <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ayuda" text="Ayuda de Usuario" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tablaUsuario" layoutX="27.0" layoutY="151.0" prefHeight="225.0" prefWidth="492.0">
+        <columns>
+          <TableColumn fx:id="columnaNombre" minWidth="18.0" prefWidth="176.0" text="Nombre" />
+          <TableColumn fx:id="columnaPassword" minWidth="137.0" prefWidth="167.0" text="Password" />
+            <TableColumn fx:id="columnaEstado" prefWidth="145.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonNuevo" layoutX="201.0" layoutY="390.0" mnemonicParsing="false" onAction="#nuevoUsuario" prefHeight="25.0" prefWidth="70.0" text="Nuevo" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="390.0" />
+      <Button fx:id="botonSalir" layoutX="445.0" layoutY="390.0" mnemonicParsing="false" onAction="#salir" prefWidth="70.0" text="Salir" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="390.0" />
+      <Button fx:id="botonEditar" layoutX="283.0" layoutY="390.0" mnemonicParsing="false" onAction="#editarUsuario" prefWidth="70.0" text="Editar" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="390.0" />
+      <Button fx:id="botonBorrar" layoutX="363.0" layoutY="390.0" mnemonicParsing="false" onAction="#borrarUsuario" prefWidth="70.0" text="Borrar" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="390.0" />
+      <ToolBar layoutY="29.0" prefHeight="40.0" prefWidth="542.0" AnchorPane.bottomAnchor="360.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="29.0">
+        <items>
+          <Button fx:id="itemToolbarNuevo" mnemonicParsing="false" onAction="#nuevoUsuario" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="itemToolbarNuevoImagen" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="itemToolbarEditar" mnemonicParsing="false" onAction="#editarUsuario" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="itemToolbarEditarImagen" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="itemToolbarBorrar" mnemonicParsing="false" onAction="#borrarUsuario" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="itemToolbarBorrarImagen" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="itemToolbarSalir" mnemonicParsing="false" onAction="#salir" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="itemToolbarSalirImagen" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

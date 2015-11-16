@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorAcuario">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="700.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda" visible="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar fx:id="toolBar" layoutY="25.0" prefHeight="40.0" prefWidth="700.0">
+        <items>
+          <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarVer" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#agregarEspecie" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarAgregar" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarEditar" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#borrarEspecie" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarBorrar" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#transferirEspecie" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarTransferir" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#salir" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarSalir" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+        </items>
+      </ToolBar>
+      <Label layoutX="20.0" layoutY="95.0" text="Numero Acuario" />
+      <Label layoutX="20.0" layoutY="130.0" text="Fecha Creación" />
+      <Label layoutX="20.0" layoutY="165.0" text="Capacidad" />
+      <Label layoutX="20.0" layoutY="200.0" text="Disponible" />
+      <TextField fx:id="fieldNumeroAcuario" layoutX="164.0" layoutY="91.0" prefHeight="25.0" prefWidth="190.0" />
+      <DatePicker fx:id="fieldFechaCreacion" layoutX="164.0" layoutY="126.0" prefHeight="25.0" prefWidth="190.0" />
+      <TextField fx:id="fieldCapacidad" layoutX="164.0" layoutY="161.0" prefHeight="25.0" prefWidth="190.0" />
+      <CheckBox fx:id="checkboxDisponible" layoutX="164.0" layoutY="200.0" mnemonicParsing="false" />
+      <TabPane layoutX="20.0" layoutY="234.0" prefHeight="282.0" prefWidth="659.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Parametros">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboTipoAgua" layoutX="148.0" layoutY="19.0" prefWidth="150.0" />
+                        <Group layoutX="14.0" layoutY="58.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="23.0" text="Temperatura" />
+                              <Label layoutX="333.0" layoutY="23.0" text="Máxima" />
+                              <TextField fx:id="fieldTemperaturaMinima" layoutX="153.0" layoutY="19.0" />
+                              <TextField fx:id="fieldTemperaturaMaxima" layoutX="383.0" layoutY="19.0" />
+                              <Label layoutX="108.0" layoutY="23.0" text="Mínima" />
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="101.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="23.0" text="Gh" />
+                              <Label layoutX="333.0" layoutY="23.0" text="Máximo" />
+                              <TextField fx:id="fieldGhMinimo" layoutX="153.0" layoutY="19.0" />
+                              <TextField fx:id="fieldGhMaximo" layoutX="383.0" layoutY="19.0" />
+                              <Label layoutX="108.0" layoutY="23.0" text="Mínimo" />
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="147.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="23.0" text="Kh" />
+                              <Label layoutX="333.0" layoutY="23.0" text="Máximo" />
+                              <TextField fx:id="fieldKhMinimo" layoutX="153.0" layoutY="19.0" />
+                              <TextField fx:id="fieldKhMaximo" layoutX="383.0" layoutY="19.0" />
+                              <Label layoutX="108.0" layoutY="23.0" text="Mínimo" />
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="188.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="23.0" text="Ph" />
+                              <Label layoutX="333.0" layoutY="23.0" text="Máximo" />
+                              <TextField fx:id="fieldPhMinimo" layoutX="153.0" layoutY="19.0" />
+                              <TextField fx:id="fieldPhMaximo" layoutX="383.0" layoutY="19.0" />
+                              <Label layoutX="108.0" layoutY="23.0" text="Mínimo" />
+                           </children>
+                        </Group>
+                        <Label layoutX="14.0" layoutY="23.0" text="Tipo de Agua" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabEspecie" text="Especies">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablaEspecies" layoutX="22.0" layoutY="8.0" prefHeight="203.0" prefWidth="615.0">
+                          <columns>
+                            <TableColumn fx:id="columnaNombre" prefWidth="90.0" text="Nombre" />
+                              <TableColumn fx:id="columnaDescripcion" prefWidth="380.0" text="Descripción" />
+                            <TableColumn fx:id="columnaCantidad" prefWidth="142.0" text="Cantidad" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="botonVer" layoutX="22.0" layoutY="218.0" mnemonicParsing="false" onAction="#verEspecie" prefWidth="70.0" text="Ver" />
+                        <Button fx:id="botonBorrar" layoutX="181.0" layoutY="218.0" mnemonicParsing="false" onAction="#borrarEspecie" prefWidth="70.0" text="Borrar" visible="false" />
+                        <Button fx:id="botonEditar" layoutX="418.0" layoutY="218.0" mnemonicParsing="false" onAction="#editarEspecie" prefWidth="70.0" text="Editar" visible="false" />
+                        <Button fx:id="botonTransferir" layoutX="181.0" layoutY="218.0" mnemonicParsing="false" onAction="#transferirEspecie" prefWidth="70.0" text="Transferir" />
+                        <Button fx:id="botonAgregar" layoutX="101.0" layoutY="218.0" mnemonicParsing="false" onAction="#agregarEspecie" prefWidth="70.0" text="Agregar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="botonGuardar" layoutX="532.0" layoutY="529.0" mnemonicParsing="false" onAction="#guardar" prefWidth="70.0" text="Guardar" />
+      <Button fx:id="botonSalir" layoutX="610.0" layoutY="529.0" mnemonicParsing="false" onAction="#salir" prefWidth="70.0" text="Salir" />
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="509.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="321.0" layoutY="165.0" text="Litros" />
+      <TextField fx:id="fieldTemp" editable="false" layoutX="164.0" layoutY="126.0" prefHeight="25.0" prefWidth="190.0" visible="false" />
+   </children>
+</AnchorPane>

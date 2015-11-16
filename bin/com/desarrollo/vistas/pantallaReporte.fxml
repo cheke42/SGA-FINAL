@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorReporte">
+   <children>
+      <ImageView fx:id="imagenPdf" fitHeight="224.0" fitWidth="392.0" layoutX="129.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../recursos/imagenes/reportes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="63.0" text="Reporte" />
+      <ComboBox fx:id="comboTipoReporte" layoutX="74.0" layoutY="59.0" prefHeight="25.0" prefWidth="223.0" />
+      <Button fx:id="botonVer" layoutX="325.0" layoutY="59.0" mnemonicParsing="false" onAction="#ver" prefHeight="25.0" prefWidth="110.0" text="Ver" />
+      <Button fx:id="botonGuardar" layoutX="447.0" layoutY="59.0" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="110.0" text="Guardar" />
+   </children>
+</AnchorPane>

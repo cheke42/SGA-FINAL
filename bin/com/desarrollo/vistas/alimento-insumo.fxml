@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorAlimentoInsumo">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="640.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda" visible="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de.." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar fx:id="toolbar" layoutY="27.0" prefHeight="40.0" prefWidth="640.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#verPaquete" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarVerPaquete" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#nuevoPaquete" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarNuevoPaquete" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#modificarPaquete" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarEditarPaquete" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#borrarPaquete" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarBorrarPaquete" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#salir" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="imagenToolbarSalir" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+        </items>
+      </ToolBar>
+      <Label layoutX="31.0" layoutY="95.0" text="Nombre" />
+      <Label layoutX="31.0" layoutY="131.0" text="Cantidad disponible" />
+      <Label layoutX="31.0" layoutY="192.0" text="Cantidad maxima" />
+      <Label layoutX="33.0" layoutY="161.0" text="Cantidad mínima" />
+      <TextField fx:id="fieldNombre" layoutX="160.0" layoutY="91.0" />
+      <TextField fx:id="fieldCantidadDisponible" layoutX="160.0" layoutY="124.0" />
+      <TextField fx:id="fieldCantidadMinima" layoutX="160.0" layoutY="157.0" />
+      <TextField fx:id="fieldCantidadMaxima" layoutX="160.0" layoutY="188.0" />
+      <ComboBox fx:id="comboEstadoMaterial" layoutX="160.0" layoutY="217.0" onAction="#cambiarTipoUnidad" prefWidth="150.0" />
+      <ComboBox fx:id="comboTipoUnidad" layoutX="407.0" layoutY="217.0" onAction="#cambiarUnidad" prefWidth="150.0" />
+      <TableView fx:id="tablaPaquete" layoutX="30.0" layoutY="270.0" prefHeight="200.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="columnaNumeroPaquete" prefWidth="116.0" text="N°  Paquete" />
+          <TableColumn fx:id="columnaCantidad" prefWidth="116.0" text="Cantidad" />
+            <TableColumn fx:id="columnaFechaAdquisicion" prefWidth="116.0" text="Fecha adquisicion" />
+            <TableColumn fx:id="columnaFechaVencimiento" prefWidth="116.0" text="Fecha vencimiento" />
+            <TableColumn fx:id="columnaEstado" prefWidth="116.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonVerPaquete" layoutX="32.0" layoutY="486.0" mnemonicParsing="false" onAction="#verPaquete" prefHeight="25.0" prefWidth="83.0" text="Ver paquete" />
+      <Button fx:id="botonNuevoPaquete" layoutX="350.0" layoutY="486.0" mnemonicParsing="false" onAction="#nuevoPaquete" prefHeight="25.0" prefWidth="99.0" text="Nuevo paquete" />
+      <Button fx:id="botonEditarPaquete" layoutX="124.0" layoutY="486.0" mnemonicParsing="false" onAction="#modificarPaquete" prefHeight="25.0" prefWidth="99.0" text="Editar paquete" visible="false" />
+      <Button fx:id="botonBorrarPaquete" layoutX="350.0" layoutY="486.0" mnemonicParsing="false" onAction="#borrarPaquete" prefHeight="25.0" prefWidth="99.0" text="Borrar paquete" visible="false" />
+      <ImageView fx:id="imagenInsumoPaquete" fitHeight="128.0" fitWidth="128.0" layoutX="482.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="botonGuardar" layoutX="460.0" layoutY="486.0" mnemonicParsing="false" onAction="#guardar" prefWidth="70.0" text="Guardar" />
+      <Button fx:id="botonSalir" layoutX="540.0" layoutY="486.0" mnemonicParsing="false" onAction="#salir" prefWidth="70.0" text="Salir" />
+      <ImageView fx:id="imagenWarning" fitHeight="25.0" fitWidth="25.0" layoutX="349.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../recursos/imagenes/warning.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="textoWarning" layoutX="386.0" layoutY="160.0" text="Label" visible="false">
+         <font>
+            <Font name="Verdana" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="221.0" text="Estado de material" />
+      <Label layoutX="325.0" layoutY="221.0" text="Tipo Unidad" />
+      <Label fx:id="labelUnidadCantidadMaxima" layoutX="277.0" layoutY="192.0" text="Label" textAlignment="RIGHT" visible="false" />
+      <Label fx:id="labelUnidadCantidadMinima" layoutX="277.0" layoutY="161.0" text="Label" textAlignment="RIGHT" visible="false" />
+   </children>
+</AnchorPane>

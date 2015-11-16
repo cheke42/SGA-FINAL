@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorEspecie">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="640.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda" visible="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="30.0" layoutY="38.0" text="DATOS DE ESPECIE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="62.0" text="Nombre" />
+      <Label layoutX="30.0" layoutY="97.0" text="Cantidad" />
+      <Label layoutX="30.0" layoutY="132.0" text="Tipo de agua" />
+      <Label layoutX="30.0" layoutY="167.0" text="Descripción" />
+      <TextField fx:id="fieldNombre" layoutX="137.0" layoutY="58.0" prefHeight="25.0" prefWidth="183.0" />
+      <TextField fx:id="fieldCantidad" layoutX="137.0" layoutY="93.0" prefHeight="25.0" prefWidth="183.0" />
+      <ComboBox fx:id="comboTipoAgua" layoutX="137.0" layoutY="128.0" prefHeight="25.0" prefWidth="183.0" promptText="Seleccione tipo de agua ..." />
+      <TextArea fx:id="textAreaDescripcion" layoutX="30.0" layoutY="195.0" prefHeight="88.0" prefWidth="580.0" />
+      <TabPane layoutX="30.0" layoutY="294.0" prefHeight="261.0" prefWidth="580.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Parametros">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Group layoutX="14.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="23.0" text="Temperatra" />
+                              <TextField fx:id="fieldTemperaturaMinima" layoutX="190.0" layoutY="19.0" prefHeight="25.0" prefWidth="107.0" />
+                              <TextField fx:id="fieldTemperaturaMaxima" layoutX="371.0" layoutY="19.0" prefHeight="25.0" prefWidth="107.0" />
+                              <Label layoutX="137.0" layoutY="23.0" text="Mínima" />
+                              <Label layoutX="311.0" layoutY="23.0" text="Máxima" />
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="16.0">
+                           <children>
+                              <Label layoutX="137.0" layoutY="54.0" text="Mínimo" />
+                              <TextField fx:id="fieldGhMinimo" layoutX="190.0" layoutY="50.0" prefHeight="25.0" prefWidth="107.0" />
+                              <TextField fx:id="fieldGhMaximo" layoutX="371.0" layoutY="50.0" prefHeight="25.0" prefWidth="107.0" />
+                              <Label layoutX="14.0" layoutY="54.0" text="Gh" />
+                              <Label layoutX="311.0" layoutY="54.0" text="Máximo" />
+                           </children>
+                        </Group>
+                        <Group layoutX="13.0" layoutY="30.0">
+                           <children>
+                              <TextField fx:id="fieldKhMinimo" layoutX="191.0" layoutY="84.0" prefHeight="25.0" prefWidth="107.0" />
+                              <TextField fx:id="fieldKhMaximo" layoutX="372.0" layoutY="84.0" prefHeight="25.0" prefWidth="107.0" />
+                              <Label layoutX="138.0" layoutY="88.0" text="Mínimo" />
+                              <Label layoutX="312.0" layoutY="88.0" text="Máximo" />
+                              <Label layoutX="15.0" layoutY="88.0" text="Kh" />
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="46.0">
+                           <children>
+                              <Label layoutX="138.0" layoutY="119.0" text="Mínimo" />
+                              <TextField fx:id="fieldPhMinimo" layoutX="191.0" layoutY="115.0" prefHeight="25.0" prefWidth="107.0" />
+                              <TextField fx:id="fieldPhMaximo" layoutX="372.0" layoutY="115.0" prefHeight="25.0" prefWidth="107.0" />
+                              <Label layoutX="15.0" layoutY="119.0" text="Ph" />
+                              <Label layoutX="312.0" layoutY="119.0" text="Máximo" />
+                           </children>
+                        </Group>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabAlimentos" text="Alimentos">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listAlimentosEspecie" layoutX="14.0" layoutY="31.0" prefHeight="187.0" prefWidth="210.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Alimentos de la especie" />
+                        <Button fx:id="botonAgregarAlimento" layoutX="245.0" layoutY="73.0" mnemonicParsing="false" onAction="#agregarAlimento" prefHeight="25.0" prefWidth="90.0" text="Agregar" />
+                        <Button fx:id="botonBorrarAlimento" layoutX="245.0" layoutY="154.0" mnemonicParsing="false" onAction="#quitarAlimento" prefHeight="25.0" prefWidth="90.0" text="Borrar" />
+                        <ListView fx:id="listAlimentosSistema" layoutX="349.0" layoutY="32.0" prefHeight="186.0" prefWidth="200.0" />
+                        <Label fx:id="labelAlimentoSistema" layoutX="349.0" layoutY="15.0" text="Alimentos del sistema" />
+                        <ImageView fx:id="imagenAgregarAlimento" fitHeight="40.0" fitWidth="40.0" layoutX="270.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imagenQuitarAlimento" fitHeight="40.0" fitWidth="40.0" layoutX="270.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fx:id="imagenEspecie" fitHeight="128.0" fitWidth="128.0" layoutX="482.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="botonGuardar" layoutX="420.0" layoutY="561.0" mnemonicParsing="false" onAction="#guardar" prefWidth="90.0" text="Guardar" />
+      <Button fx:id="botonCancelar" layoutX="520.0" layoutY="561.0" mnemonicParsing="false" onAction="#salir" prefWidth="90.0" text="Calcelar" />
+      <ImageView fx:id="imagenWarning" fitHeight="25.0" fitWidth="25.0" layoutX="328.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../recursos/imagenes/warning.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="textoWarning" layoutX="355.0" layoutY="135.0" text="Label">
+         <font>
+            <Font name="Verdana" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

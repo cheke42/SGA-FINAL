@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorTarea">
+   <children>
+      <Label layoutX="14.0" layoutY="54.0" text="Recurso" />
+      <Label layoutX="14.0" layoutY="88.0" prefHeight="17.0" prefWidth="101.0" text="Fecha Finalizacion" />
+      <Label layoutX="17.0" layoutY="199.0" prefHeight="17.0" prefWidth="101.0" text="Indicaciones" />
+      <Label layoutX="14.0" layoutY="127.0" prefHeight="17.0" prefWidth="101.0" text="Usuario" />
+      <Label layoutX="17.0" layoutY="297.0" prefHeight="17.0" prefWidth="101.0" text="Observaciones: " />
+      <ComboBox fx:id="comboRecurso" layoutX="120.0" layoutY="50.0" onAction="#cambiarUnidad" prefHeight="25.0" prefWidth="174.0" promptText="Seleccione el recurso.." />
+      <DatePicker fx:id="labelFechaFinalizacion" layoutX="120.0" layoutY="84.0" />
+      <TextField fx:id="fieldUsuario" layoutX="120.0" layoutY="123.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="fieldCantidad" layoutX="120.0" layoutY="158.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextArea fx:id="textAreaIndicaciones" layoutX="18.0" layoutY="216.0" prefHeight="71.0" prefWidth="466.0" />
+      <TextArea fx:id="textAreaObservaciones" layoutX="18.0" layoutY="314.0" prefHeight="71.0" prefWidth="466.0" />
+      <Button fx:id="botonGuardar" layoutX="291.0" layoutY="400.0" mnemonicParsing="false" onAction="#guardar" prefWidth="90.0" text="Guardar" />
+      <Button fx:id="botonCancelar" layoutX="394.0" layoutY="400.0" mnemonicParsing="false" onAction="#salir" prefWidth="90.0" text="Cancelar" />
+      <Label layoutX="17.0" layoutY="162.0" prefHeight="17.0" prefWidth="101.0" text="Cantidad" />
+      <ImageView fx:id="imagenRecurso" fitHeight="140.0" fitWidth="140.0" layoutX="327.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="14.0" layoutY="24.0" text="Numero Acuario" />
+      <ComboBox fx:id="comboNumeroAcuario" layoutX="120.0" layoutY="20.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label fx:id="labelUnidad" layoutX="263.0" layoutY="162.0" text="Label" visible="false" />
+   </children>
+</AnchorPane>

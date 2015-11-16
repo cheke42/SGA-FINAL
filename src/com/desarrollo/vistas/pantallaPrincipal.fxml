@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorPantallaPrincipal">
+   <children>
+      <Button fx:id="botonUsuarios" disable="true" layoutX="598.0" layoutY="290.0" mnemonicParsing="false" onAction="#ventanaUsuario" prefHeight="25.0" prefWidth="160.0" text="Usuarios" />
+      <ImageView fx:id="imagenUsuarios" fitHeight="170.0" fitWidth="210.0" layoutX="609.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Users-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagenAlimentos" fitHeight="170.0" fitWidth="210.0" layoutX="230.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@recursos1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botonAlimentos" disable="true" layoutX="238.0" layoutY="535.0" mnemonicParsing="false" onAction="#venanaAlimento" prefHeight="25.0" prefWidth="160.0" text="Alimentos" />
+      <ImageView fx:id="imagenEspecies" fitHeight="170.0" fitWidth="210.0" layoutX="423.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@fish-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botonEspecies" disable="true" layoutX="423.0" layoutY="290.0" mnemonicParsing="false" onAction="#ventanaEspecie" prefHeight="25.0" prefWidth="160.0" text="Especies" />
+      <ImageView fx:id="imagenInformes" fitHeight="170.0" fitWidth="210.0" layoutX="49.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@informe.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botonInformes" disable="true" layoutX="41.0" layoutY="535.0" mnemonicParsing="false" onAction="#ventanaReportes" prefHeight="25.0" prefWidth="160.0" text="Reportes" />
+      <ImageView fx:id="imagenTareas" fitHeight="170.0" fitWidth="210.0" layoutX="230.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Utilities-tasks-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botonTareas" disable="true" layoutX="238.0" layoutY="290.0" mnemonicParsing="false" onAction="#ventanaTarea" prefHeight="25.0" prefWidth="160.0" text="Tareas" />
+      <Button fx:id="botonAccuario" disable="true" layoutX="41.0" layoutY="290.0" mnemonicParsing="false" onAction="#venanaAcuario" prefHeight="25.0" prefWidth="160.0" text="Acuarios" />
+      <ImageView fx:id="imagenAcuario" fitHeight="170.0" fitWidth="210.0" layoutX="49.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@fish-bowl-icon.png" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="29.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLoggin" text="Cerrar sesión" />
+                  <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ayuda" text="Ayuda SGA" />
+                  <MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca de SGA" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutY="29.0" prefHeight="40.0" prefWidth="800.0">
+        <items>
+            <Button fx:id="botonToolbarAcuario" mnemonicParsing="false" onAction="#venanaAcuario" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageAcuario" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="botonToolbarTarea" mnemonicParsing="false" onAction="#ventanaTarea" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageTareas" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+          <Button fx:id="botonToolbarEspecie" mnemonicParsing="false" onAction="#ventanaEspecie" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageEspecies" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="botonToolbarUsuario" mnemonicParsing="false" onAction="#ventanaUsuario" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageUsuarios" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="botonToolbarInforme" mnemonicParsing="false" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageInformes" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="botonToolbarAlimento" mnemonicParsing="false" onAction="#venanaAlimento" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageAlimentos" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="botonToolbarInsumo" mnemonicParsing="false" onAction="#ventanaInsumo" prefHeight="28.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fx:id="toolbarImageInsumos" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+        </items>
+      </ToolBar>
+      <Button fx:id="botonInsumos" disable="true" layoutX="423.0" layoutY="535.0" mnemonicParsing="false" onAction="#ventanaInsumo" prefWidth="160.0" text="Insumos" />
+      <ImageView fx:id="imagenInsumos" fitHeight="170.0" fitWidth="160.0" layoutX="423.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

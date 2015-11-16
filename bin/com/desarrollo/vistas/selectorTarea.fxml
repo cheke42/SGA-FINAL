@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorSelectorTarea">
+   <children>
+      <ImageView fx:id="imagenAlimentacion" fitHeight="150.0" fitWidth="150.0" layoutX="43.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ImagenMedicion" fitHeight="150.0" fitWidth="150.0" layoutX="225.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imagenLimpieza" fitHeight="150.0" fitWidth="150.0" layoutX="403.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="botonAlimentacion" layoutX="43.0" layoutY="215.0" mnemonicParsing="false" onAction="#cargarAlimentacion" prefHeight="25.0" prefWidth="150.0" text="Alimentación" />
+      <Button fx:id="botonMedicion" layoutX="225.0" layoutY="215.0" mnemonicParsing="false" onAction="#cargarMedicion" prefHeight="25.0" prefWidth="150.0" text="Medición" />
+      <Button fx:id="botonLimpieza" layoutX="403.0" layoutY="215.0" mnemonicParsing="false" onAction="#cargarLimpieza" prefHeight="25.0" prefWidth="150.0" text="Limpieza" />
+   </children>
+</AnchorPane>

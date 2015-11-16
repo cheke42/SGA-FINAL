@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.Controladorloggin">
+   <children>
+      <ImageView fx:id="imagenLogo" fitHeight="530.0" fitWidth="800.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../recursos/imagenes/imagen1.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="25.0" prefWidth="800.0" AnchorPane.bottomAnchor="530.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ayuda" text="Ayuda SGA" />
+                  <MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca de SGA" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutY="25.0" prefHeight="35.0" prefWidth="800.0" visible="false" />
+      <Label fx:id="labelUsuario" layoutX="140.0" layoutY="210.0" text="Usuario" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAlerta" layoutX="189.0" layoutY="307.0" text="Loggin incorrecto" textFill="#ff0404" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPassword" layoutX="140.0" layoutY="266.0" text="Contraseña" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fieldUsuario" layoutX="140.0" layoutY="227.0" />
+      <PasswordField fx:id="fieldPassword" layoutX="140.0" layoutY="283.0" />
+      <Button fx:id="buttonIngresar" layoutX="155.0" layoutY="334.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
+      <Button fx:id="buttonLimpiar" layoutX="239.0" layoutY="334.0" mnemonicParsing="false" onAction="#limpiarTextField" text="Limpiar" />
+   </children>
+</AnchorPane>

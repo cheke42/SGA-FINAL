@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desarrollo.controladores.ControladorPaquete">
+   <children>
+      <Label layoutX="34.0" layoutY="45.0" text="N° de paquete:" />
+      <Label layoutX="34.0" layoutY="82.0" text="Fecha de Adquisicion" />
+      <Label layoutX="32.0" layoutY="119.0" text="Fecha de Vencimiento" />
+      <Label layoutX="34.0" layoutY="157.0" text="Cantidad" />
+      <TextField fx:id="fieldNumeroPaquete" layoutX="196.0" layoutY="41.0" prefHeight="25.0" prefWidth="212.0" />
+      <DatePicker fx:id="fieldFechaAdquisicion" layoutX="196.0" layoutY="78.0" prefHeight="25.0" prefWidth="212.0" />
+      <DatePicker fx:id="fieldFechaVencimiento" layoutX="196.0" layoutY="115.0" prefHeight="25.0" prefWidth="212.0" />
+      <TextField fx:id="fieldCantidad" layoutX="196.0" layoutY="153.0" prefHeight="25.0" prefWidth="212.0" />
+      <Button fx:id="botonGuardar" layoutX="210.0" layoutY="216.0" mnemonicParsing="false" onAction="#guardar" prefWidth="90.0" text="Guardar" />
+      <Button fx:id="botonSalir" layoutX="318.0" layoutY="216.0" mnemonicParsing="false" onAction="#salir" prefWidth="90.0" text="Salir" />
+      <Label fx:id="labelUnidad" layoutX="370.0" layoutY="157.0" text="Label" textAlignment="RIGHT" />
+   </children>
+</AnchorPane>
